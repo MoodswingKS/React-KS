@@ -1,0 +1,311 @@
+
+/* ========================================================================== 
+0. MIXIN / MEDIA / ALL VARIABLES
+========================================================================== */
+
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;800&display=swap');
+
+/* Main */
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+    font-family: 'EB Garamond', serif;
+    font-style: normal;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    overflow: hidden;
+}
+
+/* Fonts */
+
+h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    word-spacing: 5px;
+    -webkit-font-smoothing: auto;
+}
+
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 60px;
+    letter-spacing: -1.45px;
+}
+
+h3 {
+    font-family: 'EB Garamond', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 10px;
+    letter-spacing: -1.45px;
+}
+
+
+
+/* Links */
+
+a:link {
+    color: #0b2469;
+}
+
+a:visited {
+    color: #0b2469;
+    opacity: 0.9;
+}
+
+a:hover {
+    color: #0e3cb9;
+    opacity: 0.8;
+}
+
+
+
+/* Breakpoints */
+
+/* $breakpoints: (
+    xs:     < 576px;        x small
+    sm:     <= 576px;       small
+    md:     >= 768px;       medium          done
+    l:      >= 992px;       large
+    xl:     >= 1200px;      x large
+    xxl:    >= 1400px;      xx large
+); */
+
+
+/* ========================================================================== 
+1. MOBILE   (MEDIUM)
+========================================================================== */
+
+/* HEADER */
+
+/* @media (max-width: 768px) { */
+.header {
+    display: grid;
+    height: 300px;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 20% 25% 15% 5% 10% 10% 3% 15%;
+    gap: 0px 0px;
+    grid-template-areas:
+        /* "header__img header__img header__img header__img header__img header__img header__img header__img header__img header__img" */
+        ". . . . . . . . . ."
+        ". . header__title header__title header__title header__title header__title header__title . ."
+        ". . header__title header__title header__title header__title header__title header__title . ."
+        ". . . . . . . . . ."
+        /* "header__img-lower header__img-lower header__img-lower header__img-lower header__img-lower header__img-lower header__img-lower header__img-lower header__img-lower header__img-lower" */
+}
+
+.header__img {
+    grid-area: header__img;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__img-lower {
+  grid-area: header__img-lower;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.header__title {
+    grid-area: header__title;
+    z-index: 4;
+    font-size: 3.5rem;
+    text-align: center;
+
+}
+
+/* NAVIGATION */
+
+.navigation {
+  display: grid;
+  height: 200px;
+
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 20% 25% 15% 5% 10% 10% 3% 15%;
+  gap: 0px 0px;
+  grid-template-areas:
+      ". . . . . . . . . ."
+      ". design__img design__img . developer__img developer__img .  artist__img artist__img ."
+      ". design__img design__img . developer__img developer__img . artist__img artist__img ."
+      ". . . . . . . . . ."
+      ". design__title design__title . developer__title developer__title . artist__title artist__title .";
+}
+
+.developer__img {
+    grid-area: developer__img;
+    max-width: 100%;
+    justify-self: center;
+}
+
+.design__img {
+    grid-area: design__img;
+    max-width: 100%;
+    justify-self: center;
+    border-radius: 50px;
+}
+
+.developer__title {
+    grid-area: developer__title;
+    text-align: center;
+
+}
+
+.design__title {
+    grid-area: design__title;
+    text-align: center;
+}
+
+.artist__title {
+    grid-area: artist__title;
+    text-align: center;
+}
+
+.artist__img {
+    grid-area: artist__img;
+    max-width: 100%;
+    justify-self: center;
+    border-radius: 50px;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  margin-top: 50px;
+  height: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 5% 50% 45%;
+  grid-template-rows: 10% 20%;
+  gap: 0px 2px;
+  border-top: 1px solid #E6E8E9;
+}
+
+.footercontainer {
+  grid-column-start: 2;
+  grid-row-start: 4;
+  font-size: 0.7rem;
+}
+
+
+.socialmedia {
+  grid-column-start: 3;
+  grid-row-start: 4;
+  justify-content: space-between;
+}
+
+.socialmedia img {
+  width: 24px;
+  height: 24px;
+}
+
+.socialmedia a {
+  padding-left: 6px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.socialmedia li:hover {
+  opacity: .5;
+}
+
+/* ABOUT */
+
+.about__title-container {
+  display: grid;
+  height: 100px;
+  grid-template-columns: 5% 10% 15% 20% 20% 15% 10% 5%;
+  grid-template-rows: 30% 70%;
+  gap: 0px 0px;
+  grid-template-areas:
+      ". . . . . . . ."
+      ". . . about__title about__title . . .";
+
+}
+
+.about__title {
+  grid-area: about__title;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  font-size: 3rem;
+  letter-spacing: -2px;
+}
+
+.About {
+  display: grid;
+  position: relative;
+  height: 300px;
+  grid-template-columns: 5% 20% 30% 10% 20% 10% 5%;
+  grid-template-rows: 5% 15% 55% 15% 10%;
+  gap: 0px 0px;
+  grid-template-areas:
+      ". . . . . . ."
+      "about__img about__img about__img . about__text about__text ."
+      "about__img about__img about__img . about__text about__text ."
+      "about__img about__img about__img . about__text about__text ."
+      ". . . . . . .";
+
+}
+
+
+.about__img {
+  grid-area: about__img;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+
+.about__text {
+  position: absolute;
+  /* text-align: left; */
+  padding: 20px;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: -9px 25px 35px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: -9px 25px 35px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: -9px 25px 35px 0px rgba(0, 0, 0, 0.06);
+}
+
+.about__text-container {
+  grid-area: about__text;
+  font-size: 0.6rem;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+.about__text-titel {
+  font-size: 0.8rem;
+  line-height: 10px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* ========================================================================== 
+2. DESKTOP
+========================================================================== */
+
