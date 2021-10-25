@@ -1,51 +1,52 @@
 import dev_icon from "./assets/mobile/developer__icon.png"
 import des_icon from "./assets/mobile/nightmarethumb.png"
 import art_icon from "./assets/mobile/untitledthumb.jpg"
-
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom'
 
 
 const Nav = () => {
     return (
         <div className="navigation">
-            <img
-                class="developer__img"
-                href="'#ms'"
-                // src="./src/assets/mobile/developer__icon.png"
-                src={dev_icon}
-                alt="developer__icon"
-            />
+            <Link to="/ms"
+                className="developer__img">
+                <img
+                    href="'#ms'"
+                    // src="./src/assets/mobile/developer__icon.png"
+                    src={dev_icon}
+                    alt="developer__icon"
+                />
+            </Link>
 
-            <div class="developer__title">
-                <HashLink smooth to="/#ms">
+            <div className="developer__title">
+                <Link to="/ms">
                     Developer
-                </HashLink>
+                </Link>
             </div>
+            <Link to="/th" className="design__img">
+                <img
+                    href="'#th'"
+                    src={des_icon}
+                    alt="nightmare-thumb"
+                />
+            </Link>
 
-            <img
-                class="design__img"
-                href="'#th'"
-                src={des_icon}
-                alt="nightmare-thumb"
-            />
-
-            <div class="design__title">
-                <HashLink smooth to="/#th">
+            <div className="design__title">
+                <Link to="/th">
                     Design
-                </HashLink>
+                </Link>
             </div>
+            <Link to="/pf" className="artist__img">
+                <img
+                    href="'#pf'"
+                    src={art_icon}
+                    alt="untitled-thumb"
+                />
+            </Link>
 
-            <img
-                class="artist__img"
-                href="'#pf'"
-                src={art_icon}
-                alt="untitled-thumb"
-            />
-
-            <div class="artist__title">
-                <HashLink smooth to="/#pf">
+            <div className="artist__title">
+                <Link to="/pf">
                     Artist
-                </HashLink>
+                </Link>
             </div>
         </div>
     )

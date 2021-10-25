@@ -1,4 +1,5 @@
 import linkedin_icon from './assets/socialmedia/linkedin.png'
+import github_icon from './assets/socialmedia/git.png'
 import instagram_icon from './assets/socialmedia/insta.png'
 import facebook_icon from './assets/socialmedia/fb.png'
 import youtube_icon from './assets/socialmedia/yt.png'
@@ -6,12 +7,23 @@ import mixcloud_icon from './assets/socialmedia/mc.png'
 
 const Footer = () => {
     return (
-        <div class="footer">
-            <div class="footercontainer">
+        <div className="footer">
+            <div className="footercontainer">
                 <p>&copy; Kasper Simons 2021</p>
             </div>
 
-            <div class="socialmedia">
+            <div className="socialmedia">
+                <a
+                    href="https://github.com/MoodswingKS"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <img
+                        src={github_icon}
+                        alt="git_icon"
+                    />
+                </a>
+
                 <a
                     href="https://www.linkedin.com/in/kasper-simons-04392017a"
                     target="_blank"

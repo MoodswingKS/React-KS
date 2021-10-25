@@ -1,5 +1,5 @@
-import __background from './assets/main_menu2.png'
-import thrive_title_img from './assets/thrive/textbox2.png'
+// import __background from './assets/main_menu2.png'
+// import thrive_title_img from './assets/thrive/textbox2.png'
 import thrive_eye from './assets/images/eyeopening.gif'
 import thrive_box from './assets/thrive/thrivebox.png'
 import Thrivefaq from "./Thrivefaq"
@@ -10,7 +10,7 @@ import screenshot3 from "./assets/screenshot4.png"
 
 import Slider from 'react-perfect-slider';
 
-const Thrive = () => {
+const ThriveScreen = () => {
     return (
         <div id="/#th">
             <div className="thrive__title"><p>T H R I V E</p></div>
@@ -25,11 +25,6 @@ const Thrive = () => {
                     </div>
                 </div>
             </div>
-            <Slider autoplay="true" >
-                <div><img src={screenshot1} alt="1" className="screenshot" /></div>
-                <div><img src={screenshot2} alt="1" className="screenshot" /></div>
-                <div><img src={screenshot3} alt="1" className="screenshot" /></div>
-            </Slider>
             <div className="thrive__choices">
                 <img className="choice__box" src={thrive_box} alt="thrive box" />
                 <div className="choice__text">
@@ -50,8 +45,16 @@ const Thrive = () => {
                     </p>
                 </div>
             </div>
+            <Slider autoplay="true" >
+                <div><img src={screenshot1} alt="1" className="screenshot" /></div>
+                <div><img src={screenshot2} alt="1" className="screenshot" /></div>
+                <div><img src={screenshot3} alt="1" className="screenshot" /></div>
+            </Slider>
+            <div className="thrive__faq"><Thrivefaq /></div>
+
+
         </div>
     )
 }
 
-export default Thrive
+export default ThriveScreen

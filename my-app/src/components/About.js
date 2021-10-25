@@ -3,13 +3,14 @@ import about__img from './assets/images/picintro.png'
 
 const About = () => {
     return (
-        <div>        <div class="about__title-container">
-            <div class="about__title">About</div>
+        <div>        
+            <div className="about__title-container">
+            <div className="about__title">About</div>
         </div>
-            <div class="About">
-                <img class="about__img" src={about__img} alt="about__img" />
-                <div class="about__text-container">
-                    <div class="about__text-titel">
+            <div className="About">
+                <img className="about__img" src={about__img} alt="about__img" />
+                <div className="about__text">
+                    <div className="about__text-titel">
                         <strong>Kasper Simons</strong>
                     </div>
                     <p>
@@ -26,7 +27,8 @@ const About = () => {
                     <p>Contact: (+31) 6 41 76 24 60</p>
                     <p>Kmrsimons@gmail.com</p>
                 </div>
-            </div></div>
+            </div>
+        </div>
     )
 }
 

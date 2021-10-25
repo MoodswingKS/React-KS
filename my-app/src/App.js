@@ -3,12 +3,11 @@ import Header from './components/Header';
 import Home from './components/Home'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-import { BrowserRouter } from 'react-router-dom'
+
 
 
 function App() {
   return (
-    <BrowserRouter>
     <div className="App">
       <header>
         <Header />
@@ -23,7 +22,6 @@ function App() {
         <Footer />
       </footer>
     </div>
-    </BrowserRouter>
   );
 }
 
