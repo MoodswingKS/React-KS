@@ -29,7 +29,7 @@ const isMobileDes = () => {
 
 const isMobileDev = () => {
     const screenSize = window.innerWidth
-    if (screenSize <= 700) {
+    if (screenSize <= 1024) {
         return (
             <Route exact path="/ms">
                 <section>
