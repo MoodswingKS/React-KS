@@ -56,8 +56,14 @@ const Home = () => {
                 {isMobileDes()}
 
                 {isMobileDev()}
-                
-                <Route exact path="/" component={About}>
+
+                <Route exact path="/React-KS">
+                    <section>
+                        <About />
+                    </section>
+                </Route>
+
+                <Route exact path="/">
                     <section>
                         <About />
                     </section>
