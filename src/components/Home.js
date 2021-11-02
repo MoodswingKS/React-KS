@@ -52,15 +52,16 @@ const Home = () => {
     return (
         <Switch>
             <div className="Home">
-                <Route exact path="/">
-                    <section>
-                        <About />
-                    </section>
-                </Route>
 
                 {isMobileDes()}
 
                 {isMobileDev()}
+                
+                <Route exact path="/" component={About}>
+                    <section>
+                        <About />
+                    </section>
+                </Route>
 
                 <Route exact path="/pf">
                     <section>
