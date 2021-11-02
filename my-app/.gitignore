@@ -11,8 +11,6 @@
 # production
 /build
 
-#images
-assets/
 
 # misc
 .DS_Store
