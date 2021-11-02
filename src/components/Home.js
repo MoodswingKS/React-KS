@@ -57,12 +57,6 @@ const Home = () => {
 
                 {isMobileDev()}
 
-                <Route exact path="/React-KS">
-                    <section>
-                        <About />
-                    </section>
-                </Route>
-
                 <Route exact path="/">
                     <section>
                         <About />
