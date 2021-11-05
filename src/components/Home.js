@@ -57,11 +57,7 @@ const Home = () => {
 
                 {isMobileDev()}
 
-                <Route exact path="/">
-                    <section>
-                        <About />
-                    </section>
-                </Route>
+                <Route exact path="/" component={About} />
 
                 <Route exact path="/pf">
                     <section>
