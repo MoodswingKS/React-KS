@@ -5,6 +5,7 @@ import MoodswingScreen from './MoodswingScreen'
 import About from './About'
 import Portfolio from './Portfolio'
 import { Route, Switch } from 'react-router-dom'
+import Developer from './Developer'
 
 
 const isMobileDes = () => {
@@ -52,6 +53,12 @@ const Home = () => {
     return (
         <Switch>
             <div className="Home">
+
+                <Route exact path="/dv">
+                    <section>
+                        <Developer />
+                    </section>
+                </Route>
 
                 {isMobileDes()}
 
