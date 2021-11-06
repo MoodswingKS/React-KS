@@ -1,12 +1,23 @@
 import dev_icon from "./assets/mobile/developer__icon.png"
 import des_icon from "./assets/mobile/nightmarethumb.png"
 import art_icon from "./assets/mobile/untitledthumb.jpg"
+import code_icon from "./assets/mobile/code__icon.png"
 import { Link } from 'react-router-dom'
 
 
 const Nav = () => {
     return (
         <div className="navigation">
+            <Link to="dv"
+                className="code__img">
+                <img 
+                    href="'#dv'"
+                    src={code_icon}
+                    alt="code__icon"
+                />
+            </Link>
+
+
             <Link to="/ms"
                 className="developer__img">
                 <img
@@ -19,7 +30,7 @@ const Nav = () => {
 
             <div className="developer__title">
                 <Link to="/ms">
-                    Developer
+                    Moodswing
                 </Link>
             </div>
             <Link to="/th" className="design__img">
@@ -29,6 +40,12 @@ const Nav = () => {
                     alt="nightmare-thumb"
                 />
             </Link>
+
+            <div className="code__title">
+                <Link to="/dv">
+                    Developer
+                </Link>
+            </div>
 
             <div className="design__title">
                 <Link to="/th">
