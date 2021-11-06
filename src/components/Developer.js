@@ -108,7 +108,7 @@ const Developer = () => {
                         rel="noreferrer">Repository</a>
                     <h1>HTML and CSS</h1>
                     <p>
-                        I've made a website in while only using HTML and CSS.<br />
+                        I've created a website while only making use of HTML and CSS.<br />
                         I used CSS Flex, Grid and other well known techniques.
                     </p>
                 </div>
