@@ -20,12 +20,13 @@ html {
 
 body {
   font-size: 16px;
-  width:100%;
-  overflow-x:hidden;
-  overflow-y:hidden;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);}
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
 
 .home {
   overflow: hidden;
@@ -105,7 +106,7 @@ a:hover {
 
 
 .header {
-  height: 150px;
+  height: 200px;
 }
 
 
@@ -127,15 +128,27 @@ a:hover {
 .navigation {
   display: grid;
   height: 200px;
-  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  grid-template-rows: 20% 25% 15% 5% 10% 10% 3% 15%;
+  grid-template-columns: 5% 20% 2.5% 20% 5% 20% 2.5% 20% 5%;
+  grid-template-rows: 5% 20% 20% 15% 10%;
   gap: 0px 0px;
+  grid-auto-flow: row;
   grid-template-areas:
-    ". . . . . . . . . ."
-    ". design__img design__img . developer__img developer__img .  artist__img artist__img ."
-    ". design__img design__img . developer__img developer__img . artist__img artist__img ."
-    ". . . . . . . . . ."
-    ". design__title design__title . developer__title developer__title . artist__title artist__title .";
+    ". . . . . . . . ."
+    ". code__img . design__img . developer__img . artist__img ."
+    ". . . . . . . . ."
+    ". . . . . . . . ."
+    ". code__title . design__title . developer__title . artist__title .";
+}
+
+.code__img {
+  grid-area: code__img;
+  max-width: 100%;
+  justify-self: center;
+}
+
+.code__title {
+  grid-area: code__title;
+  text-align: center;
 }
 
 .developer__img {
@@ -154,6 +167,7 @@ a:hover {
   max-width: 100%;
   justify-self: center;
 }
+
 
 .developer__title {
   grid-area: developer__title;
@@ -177,7 +191,30 @@ a:hover {
   justify-self: center;
 }
 
+.dev__container {
+  display: flex;
+  flex-direction: column;
+}
 
+.dev__text-image {
+  justify-self: center;
+  align-self: center;
+  max-width: 80vw;
+}
+
+.dev__text-image img {
+  max-width: 100%;
+}
+
+.dev__text {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 30px;
+  font-weight: 300;
+  margin: 5px 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 /* FOOTER */
 
@@ -293,13 +330,40 @@ a:hover {
 }
 
 @media (min-width: 1025px) {
+  .dev__text-image {
+    justify-self: center;
+    align-self: center;
+    max-width: 80vw;
+    height: 500px;
+  }
+  
+  .dev__text {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 5px 5px;
+  }
+
   .navigation {
+    display: grid;
     height: 250px;
-    }
+    grid-template-columns: 15% 10% 10% 10% 10% 10% 10% 10% 15%;
+    grid-template-rows: 5% 20% 20% 15% 10%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . . . . ."
+      ". code__img . design__img . developer__img . artist__img ."
+      ". . . . . . . . ."
+      ". . . . . . . . ."
+      ". code__title . design__title . developer__title . artist__title .";
+  }
 
   .navigation img {
     transform: scale(1.5);
   }
+
   .header_title_class p {
     font-size: 4rem;
   }
@@ -318,13 +382,13 @@ a:hover {
     gap: 0px 2px; */
     border-top: 1px solid #E6E8E9;
   }
-  
+
   .footercontainer {
     margin-top: -30px;
     font-size: 1.5rem;
   }
 
-  
+
   .about__title-container {
     display: grid;
     height: 100px;
@@ -383,7 +447,7 @@ a:hover {
     box-shadow: -9px 25px 35px 0px rgba(0, 0, 0, 0.06);
     grid-area: about_text;
   }
-  
+
   .about__text p {
     font-size: 1rem;
     line-height: 30px;
@@ -401,9 +465,15 @@ a:hover {
     font-weight: 500;
     margin-bottom: 20px;
   }
+
+  .moodswing__text {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
   /* FOOTER */
   .footer {
     margin-top: 50px;
@@ -416,6 +486,7 @@ a:hover {
     margin-top: -10px;
     font-size: 1.2rem;
   }
+
   .socialmedia img {
     width: 24px;
     height: 24px;
@@ -749,9 +820,13 @@ a:hover {
 
 .moodswing__text {
   font-style: italic;
-  padding-left: 60px;
-  padding-right: 60px;
   text-align: center;
+  font-size: 1.3rem;
+  line-height: 30px;
+  font-weight: 300;
+  margin: 20px 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 
 }
 
@@ -891,6 +966,7 @@ Thrive FAQ
 .faq-question-style:hover {
   cursor: pointer;
 }
+
 .faq-cont {
   width: 70%;
   margin: auto;
@@ -898,13 +974,17 @@ Thrive FAQ
   flex-direction: column;
   align-items: center;
   padding-top: 1.5em;
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .faq-answer-style {
   display: none;
   font-weight: 300;
@@ -933,15 +1013,16 @@ Thrive FAQ
   transform: rotate(0deg);
   transition: 0.2s transform;
 }
+
 @keyframes faq-answer-slide {
   0% {
-      opacity: 0;
-      max-height: 0;
+    opacity: 0;
+    max-height: 0;
   }
 
   100% {
-      opacity: 1;
-      max-height: 500px;
+    opacity: 1;
+    max-height: 500px;
   }
 }
 
@@ -1027,4 +1108,3 @@ THRIVE SCREEN PAGE
   text-align: center;
   font-size: 1.5rem;
 }
-
