@@ -431,8 +431,9 @@ a:hover {
 
   .about__img img {
     justify-self: center;
-    max-width: 500px;
+    max-width: 400px;
     border-radius: 500px;
+    align-content: center;
   }
 
   .about__text {
@@ -450,6 +451,7 @@ a:hover {
 
   .about__text p {
     font-size: 1rem;
+    margin: 5px auto;
     line-height: 30px;
   }
 
@@ -460,6 +462,7 @@ a:hover {
   }
 
   .about__text-titel {
+    padding-top: 10px;
     font-size: 2rem;
     line-height: 10px;
     font-weight: 500;
